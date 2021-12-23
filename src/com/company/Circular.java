@@ -91,10 +91,34 @@ public class Circular {
 
      public void delete(int E) {
 
+          if(head == null)
+               return;
 
-          if(search(E) == true){
+          if(head.data == E && head.next == head){
+               head = null;
+          }else if(head.data == E) {
 
+               Node last = head;
 
+               while (last.next  != head){
+                    last = last.next;
+               }
+
+               last.next = head.next;
+               head = head.next;
+
+          }else {
+
+               Node current = head;
+
+               while (current.next != head){
+
+                    if(current.next.data == E) {
+                         current.next = current.next.next;
+                         break;
+                    }
+                    current = current.next;
+               }
 
 
 

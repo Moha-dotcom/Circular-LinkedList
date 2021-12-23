@@ -15,7 +15,12 @@ public class Main {
 
         circular.addFirst(13);
         circular.addFirst(99);
-        circular.delete(13);
+        circular.addFirst(16);
+        circular.addFirst(12);
+
+        circular.delete(99);
+        circular.delete(16);
+        circular.delete(12);
 
 
 
